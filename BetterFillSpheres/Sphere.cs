@@ -1,24 +1,22 @@
-namespace FillSpheres
+namespace BetterFillSpheres
 {
     public class Sphere
     {
-        private readonly Color _color;
-        private float _radius;
-        private uint _timesThrown;
-
+        public Color Color { get; private set; }
+        public float Radius { get; private set; }
+        public uint TimesThrown { get; private set; } = 0;
+        
         public Sphere(Color color, float radius)
         {
-            _color = color;
-            _radius = radius;
-            _timesThrown = 0;
+            Color = color;
+            Radius = radius;
+            TimesThrown = 0;
         }
 
-        public void Pop() => _radius = 0;
+        public void Pop() => Radius = 0;
         
-        public void Throw() => _timesThrown = _radius > 0 ? _timesThrown + 1 : _timesThrown;
-        
-        public Color GetColor() => _color;
-        public uint GetTimesThrown() => _timesThrown;
-        public override string ToString() => $"color:({_color}), radius:{_radius}, times thrown:{_timesThrown}";
+        public void Throw() => TimesThrown = Radius > 0 ? TimesThrown + 1 : TimesThrown;
+
+        public override string ToString() => $"color:({Color}), radius:{Radius}, times thrown:{TimesThrown}";
     }
 }

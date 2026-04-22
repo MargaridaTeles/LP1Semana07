@@ -6,14 +6,14 @@ namespace BetterColorSpheres
     {
         private Color Color { get; }
         public float Raio { get; private set; }
-        public int countThrown { get; private set; }
+        public int CountThrown { get; private set; }
         private const float POPPED_RADIUS = 0f;
         
         public Sphere(Color color, float raio)
         {
             Color = color;
             Raio = raio;
-            countThrown = 0;
+            CountThrown = 0;
         }
 
         public void Pop()
@@ -24,12 +24,12 @@ namespace BetterColorSpheres
         public void Throw()
         {
             if (Raio > 0)
-                countThrown++;
+                CountThrown++;
         }
 
         public override string ToString()
         {
-            return $"Sphere(Radius:{Raio}, CountThrown:{countThrown}, {Color})";
+            return $"Sphere(Radius:{Raio}, CountThrown:{CountThrown}, {Color})";
         }
     }
 }

@@ -37,5 +37,10 @@ namespace ColorSpheres
         {
             return (byte)((red + green + blue) / 3);
         }
+
+        public override string ToString()
+        {
+            return $"Color(R:{red}, G:{green}, B:{blue}, A:{alpha}, Grey:{GetGrey()})";
+        }
     }
 }

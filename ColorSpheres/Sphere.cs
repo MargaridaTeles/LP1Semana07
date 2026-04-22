@@ -5,10 +5,10 @@ namespace ColorSpheres
     public class Sphere
     {
         private Color color;
-        private int raio;
+        private float raio;
         private int countThrown;
         
-        public Sphere(Color color, int raio)
+        public Sphere(Color color, float raio)
         {
             this.color = color;
             this.raio = raio;
@@ -27,5 +27,10 @@ namespace ColorSpheres
         }
 
         public int GetTimesThrown() => countThrown;
+
+        public override string ToString()
+        {
+            return $"Sphere(Radius:{raio}, CountThrown:{countThrown}, {color})";
+        }
     }
 }

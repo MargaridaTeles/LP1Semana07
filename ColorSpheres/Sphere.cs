@@ -4,9 +4,10 @@ namespace ColorSpheres
 {
     public class Sphere
     {
-        private Color color;
+        private readonly Color color;
         private float raio;
         private int countThrown;
+        private const float POPPED_RADIUS = 0f;
         
         public Sphere(Color color, float raio)
         {
@@ -17,7 +18,7 @@ namespace ColorSpheres
 
         public void Pop()
         {
-            raio = 0;
+            raio = POPPED_RADIUS;
         }
 
         public void Throw()

@@ -4,10 +4,11 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private byte red;
-        private byte green;
-        private byte blue;
-        private byte alpha;
+        private readonly byte red;
+        private readonly byte green;
+        private readonly byte blue;
+        private readonly byte alpha;
+        private const byte DEFAULT_ALPHA = 255;
 
         public Color(byte red, byte green, byte blue, byte alpha)
         {
@@ -22,7 +23,7 @@ namespace ColorSpheres
             this.red = red;
             this.green = green;
             this.blue = blue;
-            alpha = 255;
+            alpha = DEFAULT_ALPHA;
         }
 
         public byte GetRed() => red;

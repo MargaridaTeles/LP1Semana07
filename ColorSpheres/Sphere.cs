@@ -14,5 +14,18 @@ namespace ColorSpheres
             this.raio = raio;
             countThrown = 0;
         }
+
+        public void Pop()
+        {
+            raio = 0;
+        }
+
+        public void Throw()
+        {
+            if (raio > 0)
+                countThrown++;
+        }
+
+        public int GetTimesThrown() => countThrown;
     }
 }

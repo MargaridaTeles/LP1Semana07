@@ -4,7 +4,7 @@ namespace PowerCell
 {
     public class Cell
     {
-        private float charge;
+        //private float charge;
         private string Name { get; }
         private float Charge;
         private int Level
@@ -30,7 +30,7 @@ namespace PowerCell
 
         public override string ToString()
         {
-            return $"[{Name}] Level {Level}: {Charge}/200";
+            return $"[{Name}] Level {Level}: {Charge:F0}/200";
         }
 
     }
